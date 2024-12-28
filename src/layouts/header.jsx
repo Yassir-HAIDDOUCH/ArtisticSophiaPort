@@ -15,7 +15,7 @@ function header() {
 
     return (
 
-        <nav className={`min-w-full ${location.pathname === '/' ? 'fixed' : 'sticky'} bg-primary-light top-0 z-10`}>
+        <nav className={`min-w-full ${location.pathname === '/' ? 'fixed' : 'sticky'} bg-primary top-0 z-10`}>
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative">
                 <div className="flex h-16 items-center justify-between">
                     <div className="flex-shrink-0">
@@ -28,7 +28,7 @@ function header() {
                                     <Link
                                         key={item.name}
                                         to={item.path}
-                                        className={`rounded-md select-none px-3 py-2 pb-3 text-md font-medium transition duration-300 ${item.path === location.pathname ? 'bg-primary/90 hover:bg-primary text-white' : 'text-nav hover:text-white hover:bg-primary/50'
+                                        className={`rounded-md select-none px-3 py-2 pb-3 text-md font-medium transition duration-300 ${item.path === location.pathname ? 'bg-secondary/90 hover:bg-secondary text-white' : 'text-nav hover:text-white hover:bg-secondary/50'
                                             }`}
                                         aria-current={item.path === location.pathname ? 'page' : undefined}
                                     >
@@ -41,7 +41,7 @@ function header() {
                     <div className="-mr-2 flex md:hidden">
                         <button
                             onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
-                            className="relative inline-flex items-center justify-center rounded-md bg-primary/90 p-2 text-white hover:bg-primary focus:outline-none focus:ring-offset-orange-500"
+                            className="relative inline-flex items-center justify-center rounded-md bg-secondary/90 p-2 text-white hover:bg-secondary focus:outline-none focus:ring-offset-secondary"
                         >
                             <span className="sr-only">Open main menu</span>
                             {isMobileMenuOpen ? (

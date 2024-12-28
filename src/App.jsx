@@ -1,8 +1,11 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Header from './components/layouts/header.jsx';
-import Footer from './components/layouts/footer.jsx';
-import Home from './components/pages/home.jsx';
+import Header from './layouts/header.jsx';
+import Footer from './layouts/footer.jsx';
+import Home from './pages/home.jsx';
+import Projects from './pages/projects.jsx';
+import Project from './pages/project.jsx';
+import About from './pages/about.jsx';
 
 const App = () => {
   return (
@@ -10,6 +13,9 @@ const App = () => {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path='/Projects' element={<Projects/>}/>
+        <Route path='/Project/:id' element={<Project/>}/>
+        <Route path='/AboutMe' element={<About/>}/>
       </Routes>
       <Footer></Footer>
     </>

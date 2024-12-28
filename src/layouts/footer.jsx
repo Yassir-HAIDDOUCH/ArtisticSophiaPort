@@ -1,11 +1,11 @@
 import React from "react";
-
+import {  useLocation } from 'react-router-dom';
 
 const Footer = () => {
-
+ const location = useLocation(); // Get current route path
   return (
     <footer
-      className={`text-gray-600 bg-gradient-to-t from-primary-light pt-10 to-primary-light/5 body-font ${location.pathname === '/' ? 'fixed' : 'sticky'} bottom-0 z-10 w-full  `}
+      className={`text-gray-600 bg-gradient-to-t from-primary pt-10 to-bodyBg body-font ${location.pathname == '/' ? 'fixed bottom-0' : ''}  z-10 w-full  `}
     >
       <div className="w-full px-5 py-3 flex items-center sm:flex-row flex-col">
         <a
