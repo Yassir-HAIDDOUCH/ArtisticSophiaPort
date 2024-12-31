@@ -4,6 +4,7 @@ import Hero from "../layouts/hero";
 
 
 
+
 function Project() {
 
     const { id } = useParams();
@@ -44,6 +45,8 @@ function Project() {
         setFilteredProject(project);
     }, [id, projects]);
 
+
+    
 
     return (
         <div>

@@ -4,6 +4,7 @@ import Hero from "../layouts/hero";
 
 
 
+
 function projects() {
 
     const [projects, setProjects] = useState([
@@ -35,6 +36,7 @@ function projects() {
 
 
 
+
     return (
         <>
             <div className="bg-bodyBg ">
@@ -43,12 +45,12 @@ function projects() {
 
                 <div className='container flex flex-wrap py-5 ' >
                     {projects.map((project, index) => (
-                        <Link to={`/project/${project.id}`}>
-                            <button class="px-8 z-30 py-4  m-3 border-2 border-white rounded-md text-white relative font-semibold hover:border-transparent after:-z-20 after:absolute after:h-1 after:w-1 after:bg-primary after:left-5 overflow-hidden after:bottom-0 after:translate-y-full after:rounded-md after:hover:scale-[300] after:hover:transition-all after:hover:duration-700 after:transition-all after:duration-700 transition-all duration-700 text-2xl">
+                        <Link to={`/project/${project.id}`} key={project.id} >
+                            <button className="px-8 z-30 py-4  m-3 border-2 border-white rounded-md text-white relative font-semibold hover:border-transparent after:-z-20 after:absolute after:h-1 after:w-1 after:bg-primary after:left-5 overflow-hidden after:bottom-0 after:translate-y-full after:rounded-md after:hover:scale-[300] after:hover:transition-all after:hover:duration-700 after:transition-all after:duration-700 transition-all duration-700 text-2xl">
                                 {project.name}
                             </button>
                         </Link>
-                    ))};
+                    ))}
                 </div>
 
             </div>
